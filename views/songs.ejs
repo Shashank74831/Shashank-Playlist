@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= appName %> | Songs</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a class="logo" href="/">❤️ <%= appName %></a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/songs">Songs</a>
+        </div>
+    </nav>
+
+    <main class="songs-page">
+
+        <div class="page-heading">
+            <p class="eyebrow">A SPECIAL COLLECTION ❤️</p>
+            <h1>Shashank's Music World</h1>
+            <p><p>A collection of melodies, memories and favourite beats, all in one place.</p></p>
+        </div>
+
+        <div class="song-grid">
+
+            <% songs.forEach(function(song, index) { %>
+
+                <article class="song-card">
+
+                    <div class="letter"><%= song.letter %></div>
+
+                    <p class="genre"><%= song.genre %></p>
+
+                    <h2><%= song.title %></h2>
+
+                    <p class="artist">
+                        Artist: <%= song.artist %>
+                    </p>
+
+                    <div class="song-number">
+                        TRACK 0<%= index + 1 %>
+                    </div>
+
+                </article>
+
+            <% }); %>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Made with ❤️ | © 2026 <%= appName %></p>
+    </footer>
+
+</body>
+</html>
